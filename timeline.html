@@ -1,13 +1,13 @@
-<!-- Horizontal Character Story Timeline Widget (RE:DO Color Compact Ver.) -->
+<!-- Horizontal Character Story Timeline Widget (RE:DO Color Transparent Ver.) -->
 <div class="timeline-outer-frame">
   <div class="timeline-card">
     
-    <!-- 1. 상단 헤더 (크기 및 자간 축소) -->
+    <!-- 1. 상단 헤더 -->
     <div class="card-header">
       <div class="header-title">TIMELINE</div>
     </div>
 
-    <!-- 2. 중앙 일러스트 배너 영역 (높이 130px -> 95px 축소) -->
+    <!-- 2. 중앙 일러스트 배너 영역 -->
     <div class="card-banner">
       <img src="https://i.ibb.co/93W7VvZw/premium-photo-1748427745750-53281f4e8c87-2.jpg" alt="Story Banner">
     </div>
@@ -75,7 +75,7 @@
   body {
     margin: 0;
     padding: 15px;
-    background-color: #f7f8fa;
+    background-color: transparent; /* 🛠️ 타임라인 외곽 바탕을 완전히 투명하게 변경 */
     font-family: 'Pretendard', sans-serif;
     display: flex;
     justify-content: center;
@@ -83,7 +83,6 @@
     min-height: 100vh;
   }
 
-  /* 🛠️ 전체 최대 너비 축소 (800px -> 630px) */
   .timeline-outer-frame {
     width: 100%;
     max-width: 630px;
@@ -91,7 +90,7 @@
 
   .timeline-card {
     background: #ffffff;
-    border-radius: 12px; /* 라운드 수치 조정 */
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid #eef1f6;
     box-shadow: 0 8px 24px rgba(43, 74, 140, 0.04);
@@ -99,7 +98,6 @@
     flex-direction: column;
   }
 
-  /* 🛠️ 헤더 패딩 및 폰트 크기 축소 */
   .card-header {
     background-color: #ffffff;
     padding: 12px 16px;
@@ -118,7 +116,6 @@
     text-align: center;
   }
 
-  /* 🛠️ 배너 높이 축소 (130px -> 95px) */
   .card-banner {
     position: relative;
     width: 100%;
@@ -132,7 +129,6 @@
     object-fit: cover;
   }
 
-  /* 🛠️ 가로 영역 내부 여백 조절 */
   .timeline-scroll-container {
     width: 100%;
     overflow-x: auto;
@@ -161,7 +157,6 @@
     z-index: 1;
   }
 
-  /* 🛠️ 열 너비 축소 (175px -> 140px)로 이벤트 간격이 촘촘해짐 */
   .timeline-column {
     display: flex;
     flex-direction: column;
@@ -171,7 +166,6 @@
     z-index: 2;
   }
 
-  /* 🛠️ 텍스트 상하단 높이 축소 (110px -> 80px) */
   .level-content {
     width: 100%;
     height: 80px;
@@ -194,7 +188,6 @@
     padding-top: 10px;
   }
 
-  /* 🛠️ 도트 영역 크기 조정 (24px -> 18px) */
   .dot-wrapper {
     height: 18px;
     display: flex;
@@ -204,7 +197,6 @@
     width: 24px;
   }
 
-  /* 🛠️ 도트 지름 크기 축소 (12px -> 9px) */
   .timeline-dot {
     width: 9px;
     height: 9px;
@@ -215,7 +207,6 @@
   .dot-blue-char { background-color: #ffffff; border: 1.5px solid #2b4a8c; }
   .dot-joint { background-color: #2b4a8c; border: 1.5px solid #cfa35e; }
 
-  /* 🛠️ 텍스트 타이포그래피 크기 미세 축소 */
   .event-date {
     font-size: 0.7rem;
     color: #cfa35e;
@@ -239,7 +230,6 @@
     letter-spacing: -0.2px;
   }
 
-  /* 스크롤바 축소 */
   .timeline-scroll-container::-webkit-scrollbar {
     height: 4px;
   }
