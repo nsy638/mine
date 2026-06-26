@@ -1,0 +1,262 @@
+<!-- Horizontal Character Story Timeline Widget (RE:DO Color Ver.) -->
+<div class="timeline-outer-frame">
+  <div class="timeline-card">
+    
+    <!-- 1. 상단 헤더 (이미지 특유의 클래식 세리프 서체 적용) -->
+    <div class="card-header">
+      <div class="header-title">TIMELINE</div>
+    </div>
+
+    <!-- 2. 중앙 일러스트 배너 영역 -->
+    <div class="card-banner">
+      <!-- 🛠️ 원하는 서사 배너 이미지 주소를 src="..." 안에 넣으세요 -->
+      <img src="https://i.ibb.co/93W7VvZw/premium-photo-1748427745750-53281f4e8c87-2.jpg" alt="Story Banner">
+    </div>
+
+    <!-- 3. 메인 가로 타임라인 영역 (스크롤 가능) -->
+    <div class="timeline-scroll-container">
+      <div class="timeline-horizontal-wrapper">
+        
+        <!-- 중앙을 가로지르는 가로선 (은은한 황토빛 베이지) -->
+        <div class="center-horizontal-line"></div>
+        
+        <!-- 사건 1: 아래쪽 배치 (류민혁/블루 컨셉 서사) -->
+        <div class="timeline-column">
+          <div class="level-content top-side"></div>
+          <div class="dot-wrapper"><div class="timeline-dot dot-blue-char"></div></div>
+          <div class="level-content bottom-side">
+            <div class="event-date">10. 08. 08</div>
+            <div class="event-title">폭염 위 무지개</div>
+            <div class="event-desc">이 사람은 완전히 미쳤다.</div>
+          </div>
+        </div>
+
+        <!-- 사건 2: 위쪽 배치 (서도진/탄 컨셉 서사) -->
+        <div class="timeline-column">
+          <div class="level-content top-side">
+            <div class="event-date">22. 06. 26</div>
+            <div class="event-title">나비의 궤적</div>
+            <div class="event-desc">「 당신... 마술을 믿습니까? 」</div>
+          </div>
+          <div class="dot-wrapper"><div class="timeline-dot dot-tan-char"></div></div>
+          <div class="level-content bottom-side"></div>
+        </div>
+
+        <!-- 사건 3: 아래쪽 배치 (류민혁/블루 컨셉 서사) -->
+        <div class="timeline-column">
+          <div class="level-content top-side"></div>
+          <div class="dot-wrapper"><div class="timeline-dot dot-blue-char"></div></div>
+          <div class="level-content bottom-side">
+            <div class="event-date">22. 06. 28</div>
+            <div class="event-title">胡蝶之夢</div>
+            <div class="event-desc">그런데... 왜 반말이지?</div>
+          </div>
+        </div>
+
+        <!-- 사건 4: 위쪽 배치 (서도진/탄 컨셉 서사) -->
+        <div class="timeline-column">
+          <div class="level-content top-side">
+            <div class="event-date">22.XX.XX</div>
+            <div class="event-title">Ing</div>
+            <div class="event-desc"></div>
+          </div>
+          <div class="dot-wrapper"><div class="timeline-dot dot-tan-char"></div></div>
+          <div class="level-content bottom-side"></div>
+        </div>
+
+       
+
+    
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+  body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f8fa; /* 🎨 대시보드와 일치하는 깨끗한 미색 배경 */
+    font-family: 'Pretendard', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .timeline-outer-frame {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .timeline-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #eef1f6;
+    box-shadow: 0 10px 30px rgba(43, 74, 140, 0.04); /* 네이비 베이스의 미세한 음영 */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 🎨 상단 헤더: 이미지 속 Serif 서체 무드 재현 */
+  .card-header {
+    background-color: #ffffff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111111;
+    border-bottom: 1px solid #f2f4f7;
+  }
+
+  .header-title {
+    font-family: 'Didot', 'Bodoni MT', 'Cinzel', 'Georgia', serif; /* 명조 계열 세리프 폰트 */
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-align: center;
+  }
+
+  /* 배너 스타일 */
+  .card-banner {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: #f5f5f5;
+  }
+
+  .card-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 가로 스크롤 컨테이너 */
+  .timeline-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+
+  .timeline-horizontal-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    min-width: 100%;
+    padding: 40px 40px;
+    box-sizing: border-box;
+  }
+
+  /* 🎨 중앙 축 가로선 (서도진 말풍선의 부드러운 오치르/황토색 차용) */
+  .center-horizontal-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e6dbcb; 
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .timeline-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 175px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .level-content {
+    width: 100%;
+    height: 110px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  .top-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 16px;
+  }
+
+  .bottom-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 16px;
+  }
+
+  .dot-wrapper {
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    width: 30px;
+  }
+
+  /* 🎨 이미지에서 완벽하게 추출한 키 컬러 도트 */
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  /* 서도진 픽셀: 말풍선의 부드러운 황토/머스타드색 채움 */
+  .dot-tan-char { background-color: #cfa35e; border: 2px solid #cfa35e; }
+  /* 류민혁 픽셀: 제복 및 말풍선의 선명한 네이비 블루 링 */
+  .dot-blue-char { background-color: #ffffff; border: 2px solid #2b4a8c; }
+  /* 공동 픽셀: 안쪽은 블루, 테두리는 황토색의 조화 */
+  .dot-joint { background-color: #2b4a8c; border: 2px solid #cfa35e; }
+
+  /* 텍스트 타이포그래피 */
+  .event-date {
+    font-size: 0.75rem;
+    color: #cfa35e; /* 🎨 날짜 포인트를 서도진 테마 컬러로 설정하여 무드를 통일 */
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-family: 'Georgia', serif;
+  }
+
+  .event-title {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #222222;
+    margin-bottom: 5px;
+    letter-spacing: -0.3px;
+  }
+
+  .event-desc {
+    font-size: 0.75rem;
+    color: #666666;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
+  }
+
+  /* 은은한 네이비 컬러 스크롤바 UI */
+  .timeline-scroll-container::-webkit-scrollbar {
+    height: 5px;
+  }
+  .timeline-scroll-container::-webkit-scrollbar-track {
+    background: #f7f8fa;
+  }
+  .timeline-scroll-container::-webkit-scrollbar-thumb {
+    background: #d2d9e3;
+    border-radius: 10px;
+  }
+  .timeline-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #2b4a8c;
+  }
+</style>
