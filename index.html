@@ -1,0 +1,118 @@
+<div class="dday-wrapper">
+  <div class="heart-circle">
+    <svg viewBox="0 0 24 24" class="heart-icon">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+  </div>
+  
+  <div class="title-text">RE:DO</div>
+  
+  <div class="counter-display">
+    <span id="dday-number">0</span><span class="days-text">days</span>
+  </div>
+  
+  <div class="date-text">2026.06.17 ~</div>
+</div>
+
+<style>
+  /* 폰트 불러오기 (Pretendard) */
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+  body {
+    /* 전체 배경을 깔끔하게 유지 (필요시 제거 가능) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+  }
+
+  .dday-wrapper {
+    font-family: 'Pretendard', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* 원형 하트 배경 */
+  .heart-circle {
+    width: 64px;
+    height: 64px;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  /* 하트 SVG 아이콘 색상 */
+  .heart-icon {
+    width: 20px;
+    height: 20px;
+    fill: #7392a5;
+  }
+
+  /* SOMTUDIO 텍스트 */
+  .title-text {
+    font-size: 1rem;
+    color: #BDBDBD;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  /* 숫자 카운터 영역 */
+  .counter-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  /* 큰 숫자 스타일 */
+  #dday-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #7A7A7A;
+    /* 이미지에 있는 숫자의 입체감(그림자) 구현 */
+    text-shadow: 3px 3px 0px #E5E5E5; 
+  }
+
+  /* days 텍스트 스타일 */
+  .days-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666666;
+    font-style: italic;
+    margin-left: 8px;
+  }
+
+  /* 하단 날짜 텍스트 */
+  .date-text {
+    font-size: 0.85rem;
+    color: #BDBDBD;
+    font-weight: 400;
+  }
+</style>
+
+<script>
+  // 👇 여기에 시작 날짜를 입력하세요 (연도, 월-1, 일)
+  // 자바스크립트에서 월(Month)은 0부터 시작하므로 6월은 5로 입력합니다.
+  const startDate = new Date(2026, 5, 17); 
+  
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // 시간 단위를 0으로 초기화하여 정확한 일수만 계산
+
+  // 두 날짜의 차이를 계산 (밀리초 단위)
+  const diffTime = today.getTime() - startDate.getTime();
+  
+  // 밀리초를 일(day) 단위로 변환
+  // ※ 한국의 사귀는 날 계산 등은 당일을 1일로 치기 때문에 +1을 해줍니다.
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1; 
+
+  // 계산된 숫자를 HTML에 반영
+  document.getElementById('dday-number').innerText = diffDays;
+</script>
