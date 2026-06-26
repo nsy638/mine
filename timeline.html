@@ -1,4 +1,4 @@
-<!-- Horizontal Character Story Timeline Widget (RE:DO Color Transparent Ver.) -->
+<!-- Horizontal Character Story Timeline Widget (Notion Optimized Ver.) -->
 <div class="timeline-outer-frame">
   <div class="timeline-card">
     
@@ -74,18 +74,16 @@
 
   body {
     margin: 0;
-    padding: 15px;
-    background-color: transparent; /* 🛠️ 타임라인 외곽 바탕을 완전히 투명하게 변경 */
+    padding: 5px; /* 노션 블록 테두리에 딱 붙지 않도록 미세한 여백만 남김 */
+    background-color: transparent;
     font-family: 'Pretendard', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    overflow-y: hidden; /* 🛠️ 원흉이었던 오른쪽 세로 스크롤바를 강제로 숨김 */
   }
 
   .timeline-outer-frame {
     width: 100%;
     max-width: 630px;
+    margin: 0 auto; /* 🛠️ 가로 중앙 정렬 */
   }
 
   .timeline-card {
@@ -129,6 +127,7 @@
     object-fit: cover;
   }
 
+  /* 내부 가로 스크롤바는 정상 작동 유지 */
   .timeline-scroll-container {
     width: 100%;
     overflow-x: auto;
@@ -230,6 +229,7 @@
     letter-spacing: -0.2px;
   }
 
+  /* 하단 가로 스크롤바 디자인 */
   .timeline-scroll-container::-webkit-scrollbar {
     height: 4px;
   }
