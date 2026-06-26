@@ -1,0 +1,36 @@
+<div class="rectangle-img">
+  <img src="https://i.ibb.co/SXkBq7nY/20240426-3-55971.jpg" alt="image" />
+</div>
+
+<style>
+  .rectangle-img {
+    width: 100%;            /* 부모(노션 블록) 너비에 맞춤 */
+    max-width: 350px;       /* 🛠️ 세로가 너무 길어지지 않도록 최대 너비를 조절 */
+    aspect-ratio: 3 / 4;    /* 🛠️ 1:2 직사각형 비율로 변경 */
+    border-radius: 24px;    /* 모서리 둥글게 */
+    overflow: hidden;        /* 둥근 영역 밖은 잘라냄 */
+    margin: auto;           /* 중앙 정렬 */
+  }
+
+  .rectangle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* 이미지 비율 유지 + 중앙 크롭 */
+    display: block;
+  }
+
+  /* aspect-ratio 미지원 브라우저 대응 */
+  @supports not (aspect-ratio: 1 / 2) {
+    .rectangle-img {
+      position: relative;
+      padding-top: 200%;    /* 🛠️ 1:2 비율 유지를 위해 200%로 변경 (너비의 2배 세로폭) */
+    }
+    .rectangle-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>
