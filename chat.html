@@ -1,0 +1,97 @@
+<div class="chat-container">
+
+  <div class="message-group left">
+    <div class="sender-name">서도진</div>
+    <div class="chat-bubble">마술이 아니라, 그냥 속임수 아닙니까?</div>
+    <div class="chat-bubble">허가받지 않은 노점 행위 및... 아니, 체포...<br>아니, 이게 아니라... 아씨...</div>
+  </div>
+  
+  <div class="message-group right">
+    <div class="sender-name">류민혁</div>
+    <div class="chat-bubble">속, 속임수... 야, 너─</div>
+    <div class="chat-bubble">너 오늘 나 처음 보는데 어떻게 그렇게 심한 말을...</div>
+  </div>
+
+</div>
+
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+  body {
+    background-color: #ffffff; /* 노션 배경색에 맞춰 transparent로 변경 가능 */
+    font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chat-container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 큰 대화 묶음 사이의 간격 */
+  }
+
+  /* 메시지+이름 묶음 */
+  .message-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    gap: 4px; /* 🛠️ 연달아 나오는 말풍선 사이의 좁은 간격 추가 */
+  }
+
+  .message-group.left {
+    align-self: flex-start;
+    align-items: flex-start;
+  }
+
+  .message-group.right {
+    align-self: flex-end;
+    align-items: flex-end;
+  }
+
+  .sender-name {
+    font-size: 0.8rem;
+    color: #A0A0A0;
+    margin-bottom: 4px; /* 간격 살짝 조절 */
+    padding: 0 4px;
+    letter-spacing: -0.3px;
+  }
+
+  .chat-bubble {
+    padding: 12px 18px;
+    border-radius: 20px; 
+    font-size: 0.95rem;
+    font-weight: 600; 
+    line-height: 1.4;
+    word-break: break-all;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  }
+
+  /* 왼쪽 기본 스타일 (첫 번째 말풍선) */
+  .left .chat-bubble {
+    background-color: #d1af69; 
+    color: #FFFFFF;
+    border-top-left-radius: 8px; 
+  }
+
+  /* 🛠️ 왼쪽에서 두 번째부터 연달아 오는 말풍선은 위쪽 꼬리를 둥글게 깎음 */
+  .left .chat-bubble + .chat-bubble {
+    border-top-left-radius: 20px;
+  }
+
+  /* 오른쪽 기본 스타일 (첫 번째 말풍선) */
+  .right .chat-bubble {
+    background-color: #365c9a; 
+    color: #FFFFFF;
+    border-top-right-radius: 8px;
+  }
+
+  /* 🛠️ 오른쪽에서 두 번째부터 연달아 오는 말풍선은 위쪽 꼬리를 둥글게 깎음 */
+  .right .chat-bubble + .chat-bubble {
+    border-top-right-radius: 20px;
+  }
+</style>
